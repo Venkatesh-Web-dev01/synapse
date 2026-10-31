@@ -19,6 +19,23 @@ samples, guidance on mobile development, and a full API reference.
 
 **Synapse** is a modern Flutter application built for cross-platform seamless interaction, powered by Supabase for backend services and configured for Web/Cross-platform deployment.
 
+Synapse is a modern cross-platform application built with Flutter and powered by a robust Supabase backend. It provides a seamless, high-performance experience across mobile (iOS & Android) and web platforms.
+
+🚀 Key Features
+Cross-Platform Compatibility: Runs smoothly on iOS, Android, and Web platforms.
+
+Backend Services: Integrated with Supabase for real-time database management, user authentication, and file storage.
+
+Clean Architecture: Built using structured state management and clear separation of concerns for easy maintenance and scaling.
+
+Deployment Ready: Pre-configured for seamless web hosting and cross-platform deployment via Vercel.
+
+🛠️ Tech Stack
+Frontend: Flutter / Dart
+
+Backend & Database: Supabase
+
+Hosting & CI/CD: Vercel
 ---
 
 ## 🚀 Features
