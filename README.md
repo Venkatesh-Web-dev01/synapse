@@ -70,3 +70,21 @@ Before running this project, ensure you have the following installed:
 ```bash
 git clone [https://github.com/Venkatesh-Web-dev01/synapse.git](https://github.com/Venkatesh-Web-dev01/synapse.git)
 cd synapse
+
+graph TD
+    A[Flutter App UI] -->|User Input / Voice / Text| B[State Management / Bloc or Riverpod]
+    B -->|Local Processing / Offline Cache| C[(SQLite / Hive Cache)]
+    B -->|API Request / Streaming| D[AI Gateway / Orchestrator]
+    
+    subgraph AI Layer
+        D -->|LLM Calls| E[LLM Provider / OpenAI / Anthropic / Local Model]
+        D -->|Embedding Generation| F[Vector Embeddings Model]
+    end
+
+    subgraph Supabase Backend
+        F -->|Store / Query Vectors| G[(pgvector Database)]
+        D -->|RAG Retrieval| G
+        B -->|Auth & Realtime Sync| H[Supabase Auth & Database]
+        B -->|Storage| I[Supabase Storage]
+    end
+
