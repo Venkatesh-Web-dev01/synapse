@@ -71,6 +71,8 @@ Before running this project, ensure you have the following installed:
 git clone [https://github.com/Venkatesh-Web-dev01/synapse.git](https://github.com/Venkatesh-Web-dev01/synapse.git)
 cd synapse
 
+Project Structure
+Plaintext
 lib/
 ├── core/            # App constants, utilities, and theme data
 ├── features/        # Feature modules (UI, Logic, Data layers)
