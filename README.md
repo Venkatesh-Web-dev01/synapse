@@ -88,3 +88,9 @@ graph TD
         B -->|Storage| I[Supabase Storage]
     end
 
+Key Concepts
+Client Layer: Manages UI state, captures user inputs (text/voice), and handles immediate updates via local cache.
+
+AI Layer: Routes prompt requests, generates vector embeddings, and streams context-aware LLM responses.
+
+Database & Storage (Supabase): Handles relational user data, authenticates requests, and provides vector similarity search (pgvector) for contextual knowledge extraction.
