@@ -94,3 +94,43 @@ Client Layer: Manages UI state, captures user inputs (text/voice), and handles i
 AI Layer: Routes prompt requests, generates vector embeddings, and streams context-aware LLM responses.
 
 Database & Storage (Supabase): Handles relational user data, authenticates requests, and provides vector similarity search (pgvector) for contextual knowledge extraction.
+
+📋 Prerequisites
+Before running this project, ensure you have the following installed:
+
+Flutter SDK: >=3.0.0
+
+Dart SDK
+
+Git
+
+A active Supabase project instance
+
+⚙️ Setup & Installation
+1. Clone the Repository
+Bash
+git clone https://github.com/Venkatesh-Web-dev01/synapse.git
+cd synapse
+2. Configure Environment Variables
+Copy the sample environment file and configure your API keys:
+
+Bash
+cp .env.example .env
+Add your Supabase and AI provider configurations in .env:
+
+Code snippet
+SUPABASE_URL=https://your-supabase-url.supabase.co
+SUPABASE_ANON_KEY=your-anon-key
+AI_API_KEY=your-ai-api-key
+3. Install Dependencies
+Bash
+flutter pub get
+4. Run the Application
+Mobile (iOS/Android):
+
+Bash
+flutter run
+Web:
+
+Bash
+flutter run -d chrome
