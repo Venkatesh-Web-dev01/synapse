@@ -99,6 +99,70 @@ graph TD
         B -->|Storage| I[Supabase Storage]
     end
 
+<div align="center">
+
+# ⚡ SYNAPSE
+### Enterprise Cross-Platform AI Agent & RAG Orchestration Framework
+
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![Supabase](https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=3ECF8E)](https://supabase.com)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+</div>
+
+---
+
+## 📌 Executive Summary
+
+**Synapse** is a modern, enterprise-ready cross-platform engine built on **Flutter** and powered by **Supabase**. It provides real-time Retrieval-Augmented Generation (RAG), vector similarity search, and offline-first data synchronization across iOS, Android, and Web platforms.
+
+---
+
+## 🏛 Architecture & AI Infrastructure
+
+### 1. High-Level System Architecture
+
+```mermaid
+graph TB
+    subgraph Client Tier [Client Tier - Flutter App]
+        UI[Presentation Layer]
+        State[State Management - Bloc/Riverpod]
+        LocalDB[(Offline Cache - SQLite / Hive)]
+        ClientEngine[Client Event Loop]
+    end
+
+    subgraph Gateway Tier [Edge & Gateway]
+        CDN[Vercel Edge Network]
+        Gateway[AI Gateway / Rate Limiter]
+    end
+
+    subgraph AI Orchestration [AI & Intelligence Pipeline]
+        Orchestrator[LLM Router]
+        EmbedEngine[Embedding Generator]
+        Guardrails[Safety & Validation Guardrails]
+    end
+
+    subgraph Data Tier [Supabase Infrastructure]
+        Auth[Supabase Auth / GoTrue]
+        VectorDB[(PostgreSQL + pgvector)]
+        Storage[Supabase Object Storage]
+        Realtime[Realtime Subscriptions]
+    end
+
+    UI <--> State
+    State <--> LocalDB
+    State <--> Gateway
+    Gateway <--> Orchestrator
+    Orchestrator <--> EmbedEngine
+    Orchestrator <--> Guardrails
+    Orchestrator <--> VectorDB
+    State <--> Auth
+    State <--> Storage
+    State <--> Realtime
+
+
 Key Concepts
 Client Layer: Manages UI state, captures user inputs (text/voice), and handles immediate updates via local cache.
 
