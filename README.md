@@ -71,6 +71,15 @@ Before running this project, ensure you have the following installed:
 git clone [https://github.com/Venkatesh-Web-dev01/synapse.git](https://github.com/Venkatesh-Web-dev01/synapse.git)
 cd synapse
 
+lib/
+├── core/            # App constants, utilities, and theme data
+├── features/        # Feature modules (UI, Logic, Data layers)
+│   ├── ai_chat/     # LLM integration & streaming logic
+│   ├── auth/        # Supabase authentication flows
+│   └── dashboard/   # Main application view
+├── services/        # Supabase client, local cache, and network APIs
+└── main.dart        # Entry point of the application
+
 graph TD
     A[Flutter App UI] -->|User Input / Voice / Text| B[State Management / Bloc or Riverpod]
     B -->|Local Processing / Offline Cache| C[(SQLite / Hive Cache)]
