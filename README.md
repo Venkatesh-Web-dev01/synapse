@@ -120,47 +120,6 @@ graph TD
 
 ---
 
-## 🏛 Architecture & AI Infrastructure
-
-### 1. High-Level System Architecture
-
-```mermaid
-graph TB
-    subgraph Client Tier [Client Tier - Flutter App]
-        UI[Presentation Layer]
-        State[State Management - Bloc/Riverpod]
-        LocalDB[(Offline Cache - SQLite / Hive)]
-        ClientEngine[Client Event Loop]
-    end
-
-    subgraph Gateway Tier [Edge & Gateway]
-        CDN[Vercel Edge Network]
-        Gateway[AI Gateway / Rate Limiter]
-    end
-
-    subgraph AI Orchestration [AI & Intelligence Pipeline]
-        Orchestrator[LLM Router]
-        EmbedEngine[Embedding Generator]
-        Guardrails[Safety & Validation Guardrails]
-    end
-
-    subgraph Data Tier [Supabase Infrastructure]
-        Auth[Supabase Auth / GoTrue]
-        VectorDB[(PostgreSQL + pgvector)]
-        Storage[Supabase Object Storage]
-        Realtime[Realtime Subscriptions]
-    end
-
-    UI <--> State
-    State <--> LocalDB
-    State <--> Gateway
-    Gateway <--> Orchestrator
-    Orchestrator <--> EmbedEngine
-    Orchestrator <--> Guardrails
-    Orchestrator <--> VectorDB
-    State <--> Auth
-    State <--> Storage
-    State <--> Realtime
 
 
 Key Concepts
