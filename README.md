@@ -1,6 +1,7 @@
 # synapse
 
 A new Flutter project.
+**Synapse** is a modern Flutter application built for cross-platform seamless interaction, powered by Supabase for backend services and configured for Web/Cross-platform deployment.
 
 ## Getting Started
 
