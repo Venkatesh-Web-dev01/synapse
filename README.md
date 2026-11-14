@@ -62,7 +62,7 @@ graph TD
         B -->|Media Assets| I[Supabase Storage]
     end
 
-**Synapse** is a modern Flutter application built for cross-platform seamless interaction, powered by Supabase for backend services and configured for Web/Cross-platform deployment.
+
 
 Synapse is a modern cross-platform application built with Flutter and powered by a robust Supabase backend. It provides a seamless, high-performance experience across mobile (iOS & Android) and web platforms.
 
